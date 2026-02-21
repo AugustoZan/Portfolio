@@ -1,45 +1,42 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Mi Portafolio</title>
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💼</text></svg>">  <!-- Icono de portafolio (emoji) -->
-  <link rel="stylesheet" href="style.css">  <!-- Corregido: "css" en lugar de "cs" -->
+  <title>My Portfolio</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💼</text></svg>">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
-    <h1>Mi Portafolio</h1>
+    <h1>My Portfolio</h1>
   </header>
   <section id="about">
-    <h2>Sobre mí</h2>
-    <p>Soy un estudiante universitario apasionado por la 
-programación, con gran dedicación y gusto por el trabajo en 
-equipo. Me motiva aprender continuamente y aportar 
-soluciones creativas en cada proyecto..</p>
+    <h2>About Me</h2>
+    <p>I am a university student passionate about programming, highly dedicated and eager to work in a team. I am motivated by continuous learning and bringing creative solutions to every project.</p>
   </section>
   <section id="projects">
-    <h2>Proyectos</h2>
+    <h2>Projects</h2>
     <div class="projects-grid">
       <div class="project">
         <a href="https://augustozan.github.io/restaurante-virtual/" target="_blank">
-          <img src="https://github.com/AugustoZan/restaurante-virtual/blob/main/assets/logo.jpg?raw=true" alt="Restaurante Virtual">
+          <img src="https://github.com/AugustoZan/restaurante-virtual/blob/main/assets/logo.jpg?raw=true" alt="Virtual Restaurant">
         </a>
-        <h3>Restaurante Virtual (Web)</h3>
+        <h3>Virtual Restaurant (Web)</h3>
       </div>
       <div class="project">
-        <div onclick="openModal()">  <!-- Div clickable para el modal -->
-          <img src="https://github.com/AugustoZan/restaurante-virtual/blob/main/assets/logo.jpg?raw=true" alt="Restaurante Virtual">
+        <div onclick="openModal()">
+          <img src="https://github.com/AugustoZan/restaurante-virtual/blob/main/assets/logo.jpg?raw=true" alt="Virtual Restaurant">
         </div>
-        <h3>Restaurante Virtual (Móvil)</h3>
+        <h3>Virtual Restaurant (Mobile)</h3>
       </div>
     </div>
   </section>
   <footer>
     <div class="footer-icons">
-      <a href="mailto:augustozanetta46@gmail.com" title="Correo electrónico">
-        <span style="font-size: 24px;">📧</span>  <!-- Emoji de correo; reemplaza por imagen si tienes -->
+      <a href="mailto:augustozanetta46@gmail.com" title="Email">
+        <span style="font-size: 24px;">📧</span>
       </a>
-      <a href="https://wa.me/5493516811952?text=Hola%2C%20vi%20tu%20portafolio%20y%20me%20gustar%C3%ADa%20contactarte" target="_blank" title="WhatsApp">
+      <a href="https://wa.me/5493516811952?text=Hi%2C%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20get%20in%20touch" target="_blank" title="WhatsApp">
         <img src="https://github.com/AugustoZan/Portafolio/blob/main/public/assets/images/iconos/whatsapp.png?raw=true" alt="WhatsApp">
       </a>
       <a href="https://github.com/AugustoZan" target="_blank" title="GitHub">
@@ -51,27 +48,24 @@ soluciones creativas en cada proyecto..</p>
     </div>
   </footer>
 
-<!-- Modal para las capturas -->
-<div id="modal" class="modal">
-  <div class="modal-content">
-    <span class="close" onclick="closeModal()">&times;</span>  <!-- Botón de cerrar -->
-    <h2>Capturas de Pantalla - Restaurante Virtual (Móvil)</h2>
-    <div class="gallery">
-      <img src="https://github.com/AugustoZan/Portafolio/blob/main/public/assets/images/restauranteapp/captura1.jpg?raw=true" alt="Captura 1">
-      <img src="https://github.com/AugustoZan/Portafolio/blob/main/public/assets/images/restauranteapp/captura2.jpg?raw=true" alt="Captura 2">
-      <img src="https://github.com/AugustoZan/Portafolio/blob/main/public/assets/images/restauranteapp/captura3.jpg?raw=true" alt="Captura 3">
-      <img src="https://github.com/AugustoZan/Portafolio/blob/main/public/assets/images/restauranteapp/captura4.jpg?raw=true" alt="Captura 4">
-      <img src="https://github.com/AugustoZan/Portafolio/blob/main/public/assets/images/restauranteapp/captura5.jpg?raw=true" alt="Captura 5">
-    </div>
-    <!-- Botones del modal -->
-    <div class="modal-buttons">
-      <a href="https://github.com/AugustoZan/restaurante-virtual-movil" target="_blank" class="modal-button repo-button">Ir al repositorio</a>
-      <button class="modal-button cancel-button" onclick="closeModal()">Cancelar</button>
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <h2>Screenshots - Virtual Restaurant (Mobile)</h2>
+      <div class="gallery">
+        <img src="https://github.com/AugustoZan/Portafolio/blob/main/public/assets/images/restauranteapp/captura1.jpg?raw=true" alt="Screenshot 1">
+        <img src="https://github.com/AugustoZan/Portafolio/blob/main/public/assets/images/restauranteapp/captura2.jpg?raw=true" alt="Screenshot 2">
+        <img src="https://github.com/AugustoZan/Portafolio/blob/main/public/assets/images/restauranteapp/captura3.jpg?raw=true" alt="Screenshot 3">
+        <img src="https://github.com/AugustoZan/Portafolio/blob/main/public/assets/images/restauranteapp/captura4.jpg?raw=true" alt="Screenshot 4">
+        <img src="https://github.com/AugustoZan/Portafolio/blob/main/public/assets/images/restauranteapp/captura5.jpg?raw=true" alt="Screenshot 5">
+      </div>
+      <div class="modal-buttons">
+        <a href="https://github.com/AugustoZan/restaurante-virtual-movil" target="_blank" class="modal-button repo-button">Go to repository</a>
+        <button class="modal-button cancel-button" onclick="closeModal()">Close</button>
+      </div>
     </div>
   </div>
-</div>
 
-  <script src="script.js"></script>  <!-- Ruta absoluta -->
+  <script src="script.js"></script>
 </body>
-
 </html>
