@@ -229,8 +229,51 @@ footer {
   filter: brightness(0) invert(1); /* Hace los iconos blancos (si son oscuros; ajusta si no) */
 }
 
-/* Para el emoji de correo, si lo usas */
 .footer-icons span {
   font-size: 24px; /* Tamaño similar a las imágenes */
   color: #fff; /* Blanco */
+}
+
+.modal-description {
+  color: #ccc;
+  margin: 10px 0 20px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.credentials-grid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.credential-card {
+  background-color: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 15px 25px;
+  text-align: left;
+  min-width: 200px;
+}
+
+.credential-card h3 {
+  margin: 0 0 10px;
+  font-size: 1rem;
+  color: #fff;
+}
+
+.credential-card p {
+  margin: 5px 0;
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+.credential-card .label {
+  color: #888;
+  font-size: 0.8rem;
+  display: block;
+  margin-bottom: 2px;
 }
