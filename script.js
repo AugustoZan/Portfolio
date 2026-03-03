@@ -1,25 +1,20 @@
-// Función para abrir el modal
-function openModal() {
-  const modal = document.getElementById('modal');
-  modal.style.display = 'block'; // Muestra el modal
-  setTimeout(() => {
-    modal.classList.add('show'); // Agrega la clase para la animación de entrada
-  }, 10); // Pequeño delay para que la transición funcione
+function openModal(id) {
+  const modal = document.getElementById('modal-' + id);
+  modal.style.display = 'block';
+  setTimeout(() => modal.classList.add('show'), 10);
 }
 
-// Función para cerrar el modal
-function closeModal() {
-  const modal = document.getElementById('modal');
-  modal.classList.remove('show'); // Remueve la clase para la animación de salida
-  setTimeout(() => {
-    modal.style.display = 'none'; // Oculta después de la transición
-  }, 300); // Tiempo igual a la duración de la transición (0.3s)
+function closeModal(id) {
+  const modal = document.getElementById('modal-' + id);
+  modal.classList.remove('show');
+  setTimeout(() => modal.style.display = 'none', 300);
 }
 
-// Cerrar el modal si se hace clic fuera del contenido
 window.onclick = function(event) {
-  const modal = document.getElementById('modal');
-  if (event.target === modal) {
-    closeModal(); // Usa la función de cierre para animación
-  }
+  document.querySelectorAll('.modal').forEach(modal => {
+    if (event.target === modal) {
+      const id = modal.id.replace('modal-', '');
+      closeModal(id);
+    }
+  });
 }
