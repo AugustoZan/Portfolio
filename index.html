@@ -24,10 +24,16 @@
         <h3>Virtual Restaurant (Web)</h3>
       </div>
       <div class="project">
-        <div onclick="openModal()">
+        <div onclick="openModal('restaurant-mobile')">
           <img src="https://github.com/AugustoZan/restaurante-virtual/blob/main/assets/logo.jpg?raw=true" alt="Virtual Restaurant">
         </div>
         <h3>Virtual Restaurant (Mobile)</h3>
+      </div>
+      <div class="project">
+        <div onclick="openModal('turnapp')">
+          <img src="https://github.com/AugustoZan/TurnApp/blob/main/docs/assets/icons/icon.png?raw=true" alt="TurnApp">
+        </div>
+        <h3>TurnApp (Fullstack)</h3>
       </div>
     </div>
   </section>
@@ -48,9 +54,10 @@
     </div>
   </footer>
 
-  <div id="modal" class="modal">
+  <!-- Modal: Virtual Restaurant Mobile -->
+  <div id="modal-restaurant-mobile" class="modal">
     <div class="modal-content">
-      <span class="close" onclick="closeModal()">&times;</span>
+      <span class="close" onclick="closeModal('restaurant-mobile')">&times;</span>
       <h2>Screenshots - Virtual Restaurant (Mobile)</h2>
       <div class="gallery">
         <img src="https://github.com/AugustoZan/Portafolio/blob/main/public/assets/images/restauranteapp/captura1.jpg?raw=true" alt="Screenshot 1">
@@ -61,7 +68,33 @@
       </div>
       <div class="modal-buttons">
         <a href="https://github.com/AugustoZan/restaurante-virtual-movil" target="_blank" class="modal-button repo-button">Go to repository</a>
-        <button class="modal-button cancel-button" onclick="closeModal()">Close</button>
+        <button class="modal-button cancel-button" onclick="closeModal('restaurant-mobile')">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal: TurnApp -->
+  <div id="modal-turnapp" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('turnapp')">&times;</span>
+      <h2>TurnApp — Appointment Manager</h2>
+      <p class="modal-description">Fullstack web app for booking and managing appointments. Built with Node.js, Express, MySQL and vanilla JS. Deployed on Railway (backend) and GitHub Pages (frontend).</p>
+      <div class="credentials-grid">
+        <div class="credential-card">
+          <h3>👤 Admin Account</h3>
+          <p><span class="label">Email:</span> admin@turnapp.com</p>
+          <p><span class="label">Password:</span> SFKnY94qw4RLd</p>
+        </div>
+        <div class="credential-card">
+          <h3>🙋 Client Account</h3>
+          <p><span class="label">Email:</span> client@turnapp.com</p>
+          <p><span class="label">Password:</span> U44q1aiuDUK</p>
+        </div>
+      </div>
+      <div class="modal-buttons">
+        <a href="https://augustozan.github.io/TurnApp/" target="_blank" class="modal-button repo-button">Open App</a>
+        <a href="https://github.com/AugustoZan/TurnApp" target="_blank" class="modal-button repo-button">Repository</a>
+        <button class="modal-button cancel-button" onclick="closeModal('turnapp')">Close</button>
       </div>
     </div>
   </div>
