@@ -11,16 +11,22 @@
     <h1>My Portfolio</h1>
   </header>
   <section id="about">
-    <h2>About Me</h2>
-    <p>I am a university student passionate about programming, highly dedicated and eager to work in a team. I am motivated by continuous learning and bringing creative solutions to every project.</p>
+    <h2>About me</h2>
+    <p>I'm a university student passionate about programming, highly dedicated and eager to work in a team. I'm motivated by continuous learning and bringing creative solutions to every project.</p>
   </section>
   <section id="projects">
     <h2>Projects</h2>
     <div class="projects-grid">
       <div class="project">
-        <a href="https://augustozan.github.io/restaurante-virtual/" target="_blank">
+        <div onclick="openModal('turnapp')">
+          <img src="https://github.com/AugustoZan/TurnApp/blob/main/docs/assets/icons/logo.png?raw=true" alt="TurnApp">
+        </div>
+        <h3>TurnApp (Fullstack Web)</h3>
+      </div>
+      <div class="project">
+        <div onclick="openModal('restaurant-web')">
           <img src="https://github.com/AugustoZan/restaurante-virtual/blob/main/assets/logo.jpg?raw=true" alt="Virtual Restaurant">
-        </a>
+        </div>
         <h3>Virtual Restaurant (Web)</h3>
       </div>
       <div class="project">
@@ -29,12 +35,6 @@
         </div>
         <h3>Virtual Restaurant (Mobile)</h3>
       </div>
-      <div class="project">
-        <div onclick="openModal('turnapp')">
-          <img src="https://github.com/AugustoZan/TurnApp/blob/main/docs/assets/icons/logo.png?raw=true" alt="TurnApp">
-        </div>
-        <h3>TurnApp (Fullstack)</h3>
-      </div>
     </div>
   </section>
   <footer>
@@ -42,7 +42,7 @@
       <a href="mailto:augustozanetta46@gmail.com" title="Email">
         <span style="font-size: 24px;">📧</span>
       </a>
-      <a href="https://wa.me/5493516811952?text=Hi%2C%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20get%20in%20touch" target="_blank" title="WhatsApp">
+      <a href="https://wa.me/5493516811952?text=Hi%2C%20I%20saw%20your%20portfolio%20and%20I%27d%20like%20to%20get%20in%20touch" target="_blank" title="WhatsApp">
         <img src="https://github.com/AugustoZan/Portafolio/blob/main/public/assets/images/iconos/whatsapp.png?raw=true" alt="WhatsApp">
       </a>
       <a href="https://github.com/AugustoZan" target="_blank" title="GitHub">
@@ -54,18 +54,69 @@
     </div>
   </footer>
 
+  <!-- Modal: Virtual Restaurant Web -->
+  <div id="modal-restaurant-web" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('restaurant-web')">&times;</span>
+      <h2>Screenshots — Virtual Restaurant (Web)</h2>
+      <p class="modal-description">Interactive virtual restaurant built with HTML, CSS and JavaScript. Includes menu, offers and a contact form with real email sending. Portfolio project.</p>
+      
+    <div class="main-viewer">
+      <img id="view-restauranteweb" src="https://private-user-images.githubusercontent.com/127443413/543137652-6fef527a-f896-4146-be68-b072e90f5915.png?jwt=..." alt="Main View">
+    </div>
+
+    <div class="thumb-strip">
+      <img src="https://github.com/AugustoZan/restaurante-virtual/blob/main/assets/screenshots/es/menu.png?raw=true" onclick="updateView('view-restauranteweb', this.src)">
+      <img src="https://github.com/AugustoZan/restaurante-virtual/blob/main/assets/screenshots/es/ofertas.png?raw=true" onclick="updateView('view-restauranteweb', this.src)">
+      <img src="https://github.com/AugustoZan/restaurante-virtual/blob/main/assets/screenshots/es/contactos.png?raw=true" onclick="updateView('view-restauranteweb', this.src)">
+    </div>
+
+    <div class="tech-slider">
+      <div class="tech-track">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JS">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JS">
+      </div>
+    </div>
+      
+      <div class="modal-buttons">
+        <a href="https://augustozan.github.io/restaurante-virtual/" target="_blank" class="modal-button openapp-button">Open App</a>
+        <a href="https://github.com/AugustoZan/restaurante-virtual" target="_blank" class="modal-button repo-button">Repository</a>
+        <button class="modal-button cancel-button" onclick="closeModal('restaurant-web')">Close</button>
+      </div>
+
+    </div>
+  </div>
+
   <!-- Modal: Virtual Restaurant Mobile -->
   <div id="modal-restaurant-mobile" class="modal">
     <div class="modal-content">
       <span class="close" onclick="closeModal('restaurant-mobile')">&times;</span>
-      <h2>Screenshots - Virtual Restaurant (Mobile)</h2>
-      <div class="gallery">
-        <img src="https://github.com/AugustoZan/Portafolio/blob/main/public/assets/images/restauranteapp/captura1.jpg?raw=true" alt="Screenshot 1">
-        <img src="https://github.com/AugustoZan/Portafolio/blob/main/public/assets/images/restauranteapp/captura2.jpg?raw=true" alt="Screenshot 2">
-        <img src="https://github.com/AugustoZan/Portafolio/blob/main/public/assets/images/restauranteapp/captura3.jpg?raw=true" alt="Screenshot 3">
-        <img src="https://github.com/AugustoZan/Portafolio/blob/main/public/assets/images/restauranteapp/captura4.jpg?raw=true" alt="Screenshot 4">
-        <img src="https://github.com/AugustoZan/Portafolio/blob/main/public/assets/images/restauranteapp/captura5.jpg?raw=true" alt="Screenshot 5">
+      <h2>Screenshots — Virtual Restaurant (Mobile)</h2>
+      <p class="modal-description">Interactive mobile app for a virtual restaurant, built with Flutter. Offers a native Android and iOS experience with intuitive navigation, dynamic menu, special offers and a contact form with real email sending.</p>
+
+    <div class="main-viewer">
+      <img id="view-restaurantemóvil" src="https://private-user-images.githubusercontent.com/127443413/543137652-6fef527a-f896-4146-be68-b072e90f5915.png?jwt=..." alt="Main View">
+    </div>
+
+    <div class="thumb-strip thumb-strip--mobile">
+      <img src="https://github.com/AugustoZan/Portfolio/blob/main/public/assets/images/restauranteapp/captura1.jpg?raw=true" onclick="updateView('view-restaurantemóvil', this.src)">
+      <img src="https://github.com/AugustoZan/Portfolio/blob/main/public/assets/images/restauranteapp/captura2.jpg?raw=true" onclick="updateView('view-restaurantemóvil', this.src)">
+      <img src="https://github.com/AugustoZan/Portfolio/blob/main/public/assets/images/restauranteapp/captura3.jpg?raw=true" onclick="updateView('view-restaurantemóvil', this.src)">
+      <img src="https://github.com/AugustoZan/Portfolio/blob/main/public/assets/images/restauranteapp/captura4.jpg?raw=true" onclick="updateView('view-restaurantemóvil', this.src)">
+      <img src="https://github.com/AugustoZan/Portfolio/blob/main/public/assets/images/restauranteapp/captura5.jpg?raw=true" onclick="updateView('view-restaurantemóvil', this.src)">
+    </div>
+
+    <div class="tech-slider">
+      <div class="tech-track">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" alt="Flutter">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" alt="Flutter">
       </div>
+    </div>
+
       <div class="modal-buttons">
         <a href="https://github.com/AugustoZan/restaurante-virtual-movil" target="_blank" class="modal-button repo-button">Repository</a>
         <button class="modal-button cancel-button" onclick="closeModal('restaurant-mobile')">Close</button>
@@ -78,7 +129,18 @@
     <div class="modal-content">
       <span class="close" onclick="closeModal('turnapp')">&times;</span>
       <h2>TurnApp — Appointment Manager</h2>
-      <p class="modal-description">Fullstack web app for booking and managing appointments. Built with Node.js, Express, MySQL and vanilla JS. Deployed on Railway (backend) and GitHub Pages (frontend).</p>
+      <p class="modal-description">Fullstack web application to book and manage appointments. Built with Node.js, Express, MySQL and vanilla JS. Deployed on Railway (backend) and GitHub Pages (frontend).</p>
+      
+      <div class="main-viewer">
+       <img id="view-turnapp" src="..." alt="Main View">
+      </div>
+
+      <div class="thumb-strip">
+        <img src="https://github.com/AugustoZan/TurnApp/blob/main/docs/assets/screenshots/login.png?raw=true" onclick="updateView('view-turnapp', this.src)">
+        <img src="https://github.com/AugustoZan/TurnApp/blob/main/docs/assets/screenshots/dashboard.png?raw=true" onclick="updateView('view-turnapp', this.src)">
+        <img src="https://github.com/AugustoZan/TurnApp/blob/main/docs/assets/screenshots/adminpanel.png?raw=true" onclick="updateView('view-turnapp', this.src)">
+      </div>
+      
       <div class="credentials-grid">
         <div class="credential-card">
           <h3>Admin Account</h3>
@@ -91,8 +153,24 @@
           <p><span class="label">Password:</span> U44q1aiuDUK</p>
         </div>
       </div>
+
+      <div class="tech-slider">
+        <div class="tech-track">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JS">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="NodeJS">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JS">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="NodeJS">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL">
+        </div>
+      </div>
+
       <div class="modal-buttons">
-        <a href="https://augustozan.github.io/TurnApp/" target="_blank" class="modal-button repo-button">Open App</a>
+        <a href="https://augustozan.github.io/TurnApp/" target="_blank" class="modal-button openapp-button">Open App</a>
         <a href="https://github.com/AugustoZan/TurnApp" target="_blank" class="modal-button repo-button">Repository</a>
         <button class="modal-button cancel-button" onclick="closeModal('turnapp')">Close</button>
       </div>
@@ -100,6 +178,6 @@
   </div>
 
   <script src="script.js"></script>
+
 </body>
 </html>
-

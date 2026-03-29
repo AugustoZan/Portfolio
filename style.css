@@ -163,6 +163,16 @@ footer {
   background-color: #ff0000; /* Rojo */
 }
 
+
+/* Estilos específicos para el botón de abrir la app */
+.openapp-button {
+  background-color: #00cc00; /* Rojo más oscuro al pasar el mouse */
+  color: #fff; /* Texto blanco */
+}
+
+.openapp-button:hover {
+  background-color: #00ff00; /* Rojo */
+}
 /* El resto de tus estilos para .close, .gallery, etc., se mantienen igual */
 
 .close {
@@ -286,4 +296,101 @@ footer {
   width: 200px;
   height: 200px;
   object-fit: cover;
+}
+
+/* --- ESTILOS DEL CARRUSEL --- */
+.tech-slider {
+  overflow: hidden;
+  padding: 20px 0;
+  background: #111;
+  width: 70%;           /* Solo ocupa parte central */
+  margin: 0 auto;       /* Centrado */
+  position: relative;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  justify-content: left;  /* Centra el track dentro del slider */
+  /* Máscara que desvanece los bordes */
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 20%,
+    black 80%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 20%,
+    black 80%,
+    transparent 100%
+  );
+}
+
+.tech-track {
+  display: flex;
+  width: max-content;       /* Vuelve a esto — necesario para el scroll */
+  animation: scroll 8s linear infinite;
+  justify-content: center;  /* Sin efecto con max-content, pero no rompe */
+}
+
+.tech-track img {
+  width: 40px !important;
+  height: 40px !important;
+  flex-shrink: 0;
+  margin: 0 25px;           /* Margen fijo simple, sin lógica JS */
+}
+
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); } /* Mueve la tira hasta la mitad */
+}
+
+/* Contenedor de la imagen grande */
+.main-viewer {
+  width: 100%;
+  height: 350px;
+  overflow: hidden; /* Necesario para que el zoom no se salga */
+  background: #000;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-viewer img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  cursor: default;
+  /* Quitamos el transition y hover de scale */
+}
+
+/* Tira de miniaturas abajo */
+.thumb-strip {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.thumb-strip img {
+  width: 70px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 4px;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: 0.3s;
+}
+
+.thumb-strip img:hover {
+  border-color: #00ff00;
+  transform: translateY(-3px);
+}
+
+.thumb-strip--mobile img {
+  width: 45px;
+  height: 80px;
 }
