@@ -1,77 +1,295 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <title>Mi Portafolio</title>
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💼</text></svg>">  <!-- Icono de portafolio (emoji) -->
-  <link rel="stylesheet" href="style.css">  <!-- Corregido: "css" en lugar de "cs" -->
-</head>
-<body>
-  <header>
-    <h1>Mi Portafolio</h1>
-  </header>
-  <section id="about">
-    <h2>Sobre mí</h2>
-    <p>Soy un estudiante universitario apasionado por la 
-programación, con gran dedicación y gusto por el trabajo en 
-equipo. Me motiva aprender continuamente y aportar 
-soluciones creativas en cada proyecto..</p>
-  </section>
-  <section id="projects">
-    <h2>Proyectos</h2>
-    <div class="projects-grid">
-      <div class="project">
-        <a href="https://augustozan.github.io/restaurante-virtual/" target="_blank">
-          <img src="https://github.com/AugustoZan/restaurante-virtual/blob/main/assets/logo.jpg?raw=true" alt="Restaurante Virtual">
-        </a>
-        <h3>Restaurante Virtual (Web)</h3>
-      </div>
-      <div class="project">
-        <div onclick="openModal()">  <!-- Div clickable para el modal -->
-          <img src="https://github.com/AugustoZan/restaurante-virtual/blob/main/assets/logo.jpg?raw=true" alt="Restaurante Virtual">
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>My Portfolio</title>
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💼</text></svg>"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>My Portfolio</h1>
+    </header>
+    <section id="about">
+      <h2>About me</h2>
+      <p>
+        Junior frontend developer with experience in React, JavaScript and Node.js,
+        building fullstack web applications with production deploys.
+        Finishing my University Technician degree in Computer Application Development (IUA, Córdoba).
+        Available full-time from August 2025.
+      </p>
+    </section>
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="projects-grid">
+        <div class="project">
+          <div onclick="openModal('conversa')">
+            <img
+              src="https://raw.githubusercontent.com/No-Country-simulation/S03-26-Equipo-19-Web-App-Development/53c2ce97221daef7c85c346ee5f9c0857d7a72ae/frontend/public/logo.svg"
+              alt="Conversa"
+            />
+          </div>
+          <h3>Conversa</h3>
         </div>
-        <h3>Restaurante Virtual (Móvil)</h3>
+        <div class="project">
+          <div onclick="openModal('turnapp')">
+            <img
+              src="https://github.com/AugustoZan/TurnApp/blob/main/docs/assets/icons/logo.png?raw=true"
+              alt="TurnApp"
+            />
+          </div>
+          <h3>TurnApp</h3>
+        </div>
+        <div class="project">
+          <div onclick="openModal('gmod-mods')">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Garry%27s_Mod_logo.svg/960px-Garry%27s_Mod_logo.svg.png?_=20230223195930"
+              alt="Garry's Mod Addon"
+            />
+          </div>
+          <h3>Garry's Mod Addon</h3>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="footer-icons">
+        <a href="mailto:augustozanetta46@gmail.com" title="Email">
+          <span style="font-size: 24px">📧</span>
+        </a>
+        <a
+          href="https://wa.me/5493516811952?text=Hola%2C%20vi%20tu%20portafolio%20y%20me%20gustar%C3%ADa%20ponerme%20en%20contacto"
+          target="_blank"
+          title="WhatsApp"
+        >
+          <img
+            src="https://github.com/AugustoZan/Portafolio/blob/main/public/assets/images/iconos/whatsapp.png?raw=true"
+            alt="WhatsApp"
+          />
+        </a>
+        <a href="https://github.com/AugustoZan" target="_blank" title="GitHub">
+          <img
+            src="https://github.com/AugustoZan/Portafolio/blob/main/public/assets/images/iconos/github.png?raw=true"
+            alt="GitHub"
+          />
+        </a>
+        <a
+          href="https://www.linkedin.com/in/augusto-zanetta-8745012b8?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BVBV450MMTOixUeoHa6DwKA%3D%3D"
+          target="_blank"
+          title="LinkedIn"
+        >
+          <img
+            src="https://github.com/AugustoZan/Portafolio/blob/main/public/assets/images/iconos/linkedin.png?raw=true"
+            alt="LinkedIn"
+          />
+        </a>
+      </div>
+    </footer>
+
+    <!-- Modal: TurnApp -->
+    <div id="modal-turnapp" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('turnapp')">&times;</span>
+        <h2>TurnApp — Appointment Manager</h2>
+        <p class="modal-description">
+          Fullstack web application to book and manage appointments.
+          Built with Node.js, Express, PostgreSQL and vanilla JS.
+          Backend deployed on Render, database on Supabase, frontend on GitHub Pages.
+        </p>
+
+        <div class="main-viewer">
+          <img
+            id="view-turnapp"
+            src="https://github.com/AugustoZan/TurnApp/blob/main/docs/assets/screenshots/login.png?raw=true"
+            alt="Vista Principal"
+          />
+        </div>
+
+        <div class="thumb-strip">
+          <img
+            src="https://github.com/AugustoZan/TurnApp/blob/main/docs/assets/screenshots/login.png?raw=true"
+            onclick="updateView('view-turnapp', this.src)"
+          />
+          <img
+            src="https://github.com/AugustoZan/TurnApp/blob/main/docs/assets/screenshots/dashboard.png?raw=true"
+            onclick="updateView('view-turnapp', this.src)"
+          />
+          <img
+            src="https://github.com/AugustoZan/TurnApp/blob/main/docs/assets/screenshots/adminpanel.png?raw=true"
+            onclick="updateView('view-turnapp', this.src)"
+          />
+        </div>
+
+        <div class="credentials-grid">
+          <div class="credential-card">
+            <h3>Admin Account</h3>
+            <p><span class="label">Email:</span> admin@turnapp.com</p>
+            <p><span class="label">Password:</span> SFKnY94qw4RLd</p>
+          </div>
+          <div class="credential-card">
+            <h3>Client Account</h3>
+            <p><span class="label">Email:</span> client@turnapp.com</p>
+            <p><span class="label">Password:</span> U44q1aiuDUK</p>
+          </div>
+        </div>
+        <div class="tech-slider">
+          <div class="tech-track">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" />
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" />
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JS" />
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="NodeJS" />
+            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/jsonwebtokens.svg" alt="JWT" />
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL" />
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" />
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" />
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JS" />
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="NodeJS" />
+            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/jsonwebtokens.svg" alt="JWT" />
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL" />
+          </div>
+        </div>
+        <div class="modal-buttons">
+          <a
+            href="https://augustozan.github.io/TurnApp/"
+            target="_blank"
+            class="modal-button openapp-button"
+            >Open App</a
+          >
+          <a
+            href="https://github.com/AugustoZan/TurnApp"
+            target="_blank"
+            class="modal-button repo-button"
+            >Repository</a
+          >
+          <button
+            class="modal-button cancel-button"
+            onclick="closeModal('turnapp')"
+          >
+            Close
+          </button>
+        </div>
       </div>
     </div>
-  </section>
-  <footer>
-    <div class="footer-icons">
-      <a href="mailto:augustozanetta46@gmail.com" title="Correo electrónico">
-        <span style="font-size: 24px;">📧</span>  <!-- Emoji de correo; reemplaza por imagen si tienes -->
-      </a>
-      <a href="https://wa.me/5493516811952?text=Hola%2C%20vi%20tu%20portafolio%20y%20me%20gustar%C3%ADa%20contactarte" target="_blank" title="WhatsApp">
-        <img src="https://github.com/AugustoZan/Portafolio/blob/main/public/assets/images/iconos/whatsapp.png?raw=true" alt="WhatsApp">
-      </a>
-      <a href="https://github.com/AugustoZan" target="_blank" title="GitHub">
-        <img src="https://github.com/AugustoZan/Portafolio/blob/main/public/assets/images/iconos/github.png?raw=true" alt="GitHub">
-      </a>
-      <a href="https://www.linkedin.com/in/augusto-zanetta-8745012b8?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BVBV450MMTOixUeoHa6DwKA%3D%3D" target="_blank" title="LinkedIn">
-        <img src="https://github.com/AugustoZan/Portafolio/blob/main/public/assets/images/iconos/linkedin.png?raw=true" alt="LinkedIn">
-      </a>
-    </div>
-  </footer>
 
-<!-- Modal para las capturas -->
-<div id="modal" class="modal">
-  <div class="modal-content">
-    <span class="close" onclick="closeModal()">&times;</span>  <!-- Botón de cerrar -->
-    <h2>Capturas de Pantalla - Restaurante Virtual (Móvil)</h2>
-    <div class="gallery">
-      <img src="https://github.com/AugustoZan/Portafolio/blob/main/public/assets/images/restauranteapp/captura1.jpg?raw=true" alt="Captura 1">
-      <img src="https://github.com/AugustoZan/Portafolio/blob/main/public/assets/images/restauranteapp/captura2.jpg?raw=true" alt="Captura 2">
-      <img src="https://github.com/AugustoZan/Portafolio/blob/main/public/assets/images/restauranteapp/captura3.jpg?raw=true" alt="Captura 3">
-      <img src="https://github.com/AugustoZan/Portafolio/blob/main/public/assets/images/restauranteapp/captura4.jpg?raw=true" alt="Captura 4">
-      <img src="https://github.com/AugustoZan/Portafolio/blob/main/public/assets/images/restauranteapp/captura5.jpg?raw=true" alt="Captura 5">
+    <!-- Modal: Garry's Mod -->
+    <div id="modal-gmod-mods" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('gmod-mods')">&times;</span>
+        <h2>Garry's Mod Addon</h2>
+        <p class="modal-description">
+          Simple Give NPC Weapon — Addon published on Steam Workshop (built with
+          Lua). 4,430+ subscribers, actively maintained.
+        </p>
+        <div class="main-viewer" style="min-height: 400px">
+          <div
+            id="view-gmodmods"
+            class="media-container"
+            style="width: 100%; height: 400px"
+          >
+            <img
+              id="gmodmods-img"
+              src="https://images.steamusercontent.com/ugc/50205812360111032/A7754C5EEEA4641A01B48412EFE88048D767342C/?imw=268&imh=268&ima=fit&impolicy=Letterbox&imcolor=%23000000"
+              alt="Vista Principal GMod"
+              style="display: none; width: 100%; height: 100%; object-fit: cover;"
+            />
+            <iframe
+              id="gmodmods-video"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;"
+              allowfullscreen
+              style="display: block; width: 100%; height: 100%"
+            ></iframe>
+          </div>
+        </div>
+        <div class="tech-slider">
+          <div class="tech-track">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/lua/lua-original.svg" alt="Lua" />
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/lua/lua-original.svg" alt="Lua" />
+          </div>
+        </div>
+        <div class="modal-buttons">
+          <a
+            href="https://steamcommunity.com/sharedfiles/filedetails/?id=3434275260"
+            target="_blank"
+            class="modal-button openapp-button"
+            >View addon</a
+          >
+          <button
+            class="modal-button cancel-button"
+            onclick="closeModal('gmod-mods')"
+          >
+            Close
+          </button>
+        </div>
+      </div>
     </div>
-    <!-- Botones del modal -->
-    <div class="modal-buttons">
-      <a href="https://github.com/AugustoZan/restaurante-virtual-movil" target="_blank" class="modal-button repo-button">Ir al repositorio</a>
-      <button class="modal-button cancel-button" onclick="closeModal()">Cancelar</button>
+
+    <!-- Modal: Conversa -->
+    <div id="modal-conversa" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('conversa')">&times;</span>
+        <h2>Conversa</h2>
+        <p class="modal-description">
+          Intelligent CRM for startups with WhatsApp and email integration.
+          Manage leads and clients, centralize conversations,
+          automate follow-ups and visualize key metrics. Built for collaborative,
+          simple and asynchronous work.
+        </p>
+
+        <div class="main-viewer" style="min-height: 400px">
+          <div
+            id="view-conversa"
+            class="media-container"
+            style="width: 100%; height: 400px"
+          >
+            <img
+              id="conversa-img"
+              src=""
+              alt="Vista Principal Conversa"
+              style="display: none; width: 100%; height: 100%; object-fit: cover;"
+            />
+            <iframe
+              id="conversa-video"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;"
+              allowfullscreen
+              style="display: block; width: 100%; height: 100%"
+            ></iframe>
+          </div>
+        </div>
+
+        <div class="tech-slider">
+          <div class="tech-track">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.17.0/icons/react/react-original.svg" alt="React" />
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.17.0/icons/tailwindcss/tailwindcss-original.svg" alt="Tailwind CSS" />
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.17.0/icons/postgresql/postgresql-original.svg" alt="PostgreSQL" />
+            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/jsonwebtokens.svg" alt="JWT" />
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.17.0/icons/react/react-original.svg" alt="React" />
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.17.0/icons/tailwindcss/tailwindcss-original.svg" alt="Tailwind CSS" />
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.17.0/icons/postgresql/postgresql-original.svg" alt="PostgreSQL" />
+            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/jsonwebtokens.svg" alt="JWT" />
+          </div>
+        </div>
+
+        <div class="modal-buttons">
+          <a
+            href="https://github.com/No-Country-simulation/S03-26-Equipo-19-Web-App-Development/tree/frontend"
+            target="_blank"
+            class="modal-button repo-button"
+            >Repository</a
+          >
+          <button
+            class="modal-button cancel-button"
+            onclick="closeModal('conversa')"
+          >
+            Close
+          </button>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
 
-  <script src="script.js"></script>  <!-- Ruta absoluta -->
-</body>
-
+    <script src="script.js"></script>
+  </body>
 </html>
